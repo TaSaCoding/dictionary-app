@@ -21,11 +21,15 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   return (
-    <div className="Dictionary d-flex justify-content-center">
+    <div className="Dictionary">
       <form onSubmit={search}>
-        <input type="search" onChange={handleKeywordChange} />
+        <input
+          type="search"
+          onChange={handleKeywordChange}
+          className="search-input"
+        />
       </form>
-      <Results results={results}/>
+      <Results results={results} />
     </div>
   );
 }
